@@ -1,0 +1,54 @@
+form {
+    height: 100vh;
+}
+
+.q1, .q3, .q5 {
+    background: #6E0E0A;
+    color: white;
+}
+
+.q2, .q4 {
+    background: #226F54;
+}
+
+.fas.fa-hat-wizard {
+    display: none;
+        width: 20px;
+    height: 20px;
+    color: whitesmoke;
+}
+
+input[type="radio"]:checked {
+    display: none;
+}
+
+input[type="radio"]:checked + label .fas.fa-hat-wizard {
+    display: inline-block;
+    // padding-right: 1px;
+
+    // text-shadow: 2px 2px gray;
+    transition: 0.5s all;
+    // animation: glow 1s ease-in-out infinite alternate;
+}
+// input[type=radio] + label::before,
+// input[type=checkbox] + label::before {
+//     font-weight: 600;
+//     font-family: FontAwesome;
+//     content: "\f0c8";
+//     font-size:1.40em;
+//     color:silver;
+//     margin-right:5px;
+// }
+
+// input[type=radio]:checked + label::before {
+//     content: "\f6e8";
+//     color: #04819e;
+// }
+// input[type=radio][disabled] + label::before {
+//     content: "\f057";
+//     color: lightgrey;
+// }
+// input[type=checkbox],
+// input[type=radio] {
+//     display: none;
+// }
