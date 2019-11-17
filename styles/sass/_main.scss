@@ -7,6 +7,20 @@ form {
     color: white;
 }
 
+.qText {
+    display: flex;
+    justify-content: center;
+    // align-content: center;
+    // padding-top: 20%;
+
+    form {
+        padding-top: 20%;
+        h2 {
+
+        }
+    }
+}
+
 .q2, .q4 {
     background: #740001;
     color: white;

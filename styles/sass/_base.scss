@@ -2,10 +2,20 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 2rem;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 img {

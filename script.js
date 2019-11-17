@@ -8,16 +8,37 @@ const houses = {
     ravenclaw: 0
 }
 
-// add onclick functions for submit next
+// onclick functions for submit next
 
-$('.nextButton').on('click', function() {
-    console.log(this);
-    location = $(this).next('.questions');
-    // location.href = $(this).next('form.questions');
-    // location.href = nextQuestion;
+$('.nextButtonOne').on('click', function() {
+    location.href = '#q2';
 });
 
-$('')
+$('.nextButtonTwo').on('click', function () {
+    location.href = '#q3';
+});
+
+$('.nextButtonThree').on('click', function () {
+    location.href = '#q4';
+});
+
+$('.nextButtonFour').on('click', function () {
+    location.href = '#q5';
+});
+
+$('.nextButtonFive').on('click', function () {
+    location.href = '#submitFinal';
+});
+
+// $('.nextButtonOne').on('click', location.href = $(this).next('.questions'));
+
+
+
+
+// $('.nextButtonOne').on('click', function(e) {
+//     e.preventDefault;
+//     location.href = $(this).next('.questions')});
+// $('')
 
 
 const quiz = [
@@ -68,6 +89,17 @@ choicesHtml = "";
 console.log(quiz[currentQuestion].choices);
 
 
+// const smoothScroll = (hash) => {
+//     let $hash= $(hash);
+//     $('html', 'body').animate(
+//         {
+//             scrollTop: $(hash).offset().top
+//         }, 800, function() {
+//             window.location.hash = hash;
+//         }
+//     )
+// }
+
 //function that will tally the scores for each house after each question is answered
 $('form').on('submit', function (e) {
     //to prevent page from refreshing every time a form is submitted (i.e., when question is answered)
@@ -83,12 +115,12 @@ $('form').on('submit', function (e) {
         // houses['gryffindor'] += 40;
         score += 40;
         $(this).find('input:submit').attr('disabled', true);
+
     }
         else if(answer === "slytherin") {
             // houses['slytherin'] += 10;
         score += 10;
-
-            $(this).find('input:submit').attr('disabled', true);
+        $(this).find('input:submit').attr('disabled', true);
     }
 
         else if (answer === "hufflepuff") {
@@ -100,7 +132,6 @@ $('form').on('submit', function (e) {
         else if (answer === "ravenclaw") {
             // houses['ravenclaw'] += 30;
         score += 30;
-
         $(this).find('input:submit').attr('disabled', true);
         }
 
@@ -150,33 +181,29 @@ const results = {
 const finalAnswer = $('#submitFinal').on('click', function (e) {
     e.preventDefault();
 
-    let answers = $('form').find('input:radio:checked');
+    const answers = $('form').find('input:radio:checked');
 
-    //  let houseKeys = Object.keys(houses);
-    //     let houseArray = houseKeys.map(function(key) {
-    //         return {
-    //             value: key,
-    //             score: houses[key]
-    //         }
-    //     });
-
-        // const score = ;
-        // console.log(houseArray);
+        if (answers.length === 5) {
 
         if (score > 0 && score <= 80) {
             resultingWinner = results['slytherin']
+            $(this).find('input:submit').attr('disabled', true);
 
         }
         else if (score > 80 && score <= 120) {
             resultingWinner = results['hufflepuff']
-
+            $(this).find('input:submit').attr('disabled', true);
         }
 
         else if (score > 120 && score <= 160) {
             resultingWinner = results['ravenclaw']
+            $(this).find('input:submit').attr('disabled', true);
+
 
         } else if (score > 160 && score <= 200) {
             resultingWinner = results['gryffindor']
+            $(this).find('input:submit').attr('disabled', true);
+        }
 
 
 
@@ -189,7 +216,7 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
     // let answerScore = houses[$(this)];
     // if (answers.length === 5) {
     $('.resultContainer').append(`<h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
-      
+
 });
 
 $(document).ready(function() {
