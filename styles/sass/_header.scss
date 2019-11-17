@@ -11,33 +11,33 @@
 }
 
 .hufflepuff {
- background: #F5BB00;
+ background: #ecb939;
 
  svg {
-     fill: white;
+     fill: #372e29;
  }
 }
 
 .ravenclaw {
 
-    background: #0267C1;
+    background: #0e1a40;
 svg {
-     fill: white;
+     fill: #946b2d;
  }
 }
 
 .slytherin {
-    background: #226F54;
+    background: #1a472a;
 svg {
-     fill: white;
+     fill: #aaaaaa;
  }
 }
 
 .gryffindor {
-    background-color: #6E0E0A;
+    background-color: #740001;
     
     svg {
-    fill: white;
+    fill: #d3a625;
     }
 }
 
@@ -52,48 +52,62 @@ svg {
     }
 }
 
+header {
+    position: relative;
+}
+.headerText {
+    background-color: #d3a625;
+    border: 5px solid #740001;
+    border-radius: 50px;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
 // starry night background
 
-.stars, .twinkling {
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
+// .stars, .twinkling {
+//   position:fixed;
+//   top:0;
+//   left:0;
+//   right:0;
+//   bottom:0;
+//   width:100%;
+//   height:100%;
+//   display:block;
 
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
+// }
 
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:-1;
-}
+// @keyframes move-twink-back {
+//     from {background-position:0 0;}
+//     to {background-position:-10000px 5000px;}
+// }
+// @-webkit-keyframes move-twink-back {
+//     from {background-position:0 0;}
+//     to {background-position:-10000px 5000px;}
+// }
+// @-moz-keyframes move-twink-back {
+//     from {background-position:0 0;}
+//     to {background-position:-10000px 5000px;}
+// }
+// @-ms-keyframes move-twink-back {
+//     from {background-position:0 0;}
+//     to {background-position:-10000px 5000px;}
+// }
 
-.twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:-1;
+// .stars {
+//   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+//   z-index:-1;
+// }
 
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
-}
+// .twinkling{
+//   background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+//   z-index:-1;
+
+//   -moz-animation:move-twink-back 200s linear infinite;
+//   -ms-animation:move-twink-back 200s linear infinite;
+//   -o-animation:move-twink-back 200s linear infinite;
+//   -webkit-animation:move-twink-back 200s linear infinite;
+//   animation:move-twink-back 200s linear infinite;
+// }

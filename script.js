@@ -8,6 +8,17 @@ const houses = {
     ravenclaw: 0
 }
 
+// add onclick functions for submit next
+
+$('.nextButton').on('click', function() {
+    console.log(this);
+    location = $(this).next('.questions');
+    // location.href = $(this).next('form.questions');
+    // location.href = nextQuestion;
+});
+
+$('')
+
 
 const quiz = [
        { choices: ["Tell the professor immediately – cheating is wrong, no matter what.",
