@@ -183,9 +183,14 @@ form {
   height: 100vh;
 }
 
-.q1, .q3, .q5 {
+.q1, .q3, .q5, footer {
   background: #372e29;
   color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
 }
 
 .qText {
@@ -201,7 +206,11 @@ form {
   padding-top: 20%;
 }
 
-.q2, .q4 {
+.qText form h2 {
+  margin-bottom: 20px;
+}
+
+.q2, .q4, .submitLast {
   background: #740001;
   color: white;
 }
@@ -234,6 +243,14 @@ body {
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }
 
 a {
@@ -306,10 +323,48 @@ header {
 
 .headerText {
   background-color: #d3a625;
-  border: 5px solid #740001;
-  border-radius: 10px;
+  border-bottom: 5px solid #740001;
+  width: 100%;
   text-align: center;
-  position: absolute;
-  left: 25%;
-  top: 25%;
+}
+
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.stars {
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index: -1;
+}
+
+.twinkling {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: -1;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
 }

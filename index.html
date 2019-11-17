@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>What house are you in?</title>
     <script src="https://kit.fontawesome.com/df92119142.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
@@ -15,13 +17,15 @@
 
     <header>
        
-        <div class="headerText">
+        <div class="headerText wrapper">
         <h1>Sorting Hat Quiz!</h1>
         <h3>What house are you in? Find out now!</h3>
+        <button><a href="#q1">Take the <br> Quiz!</a></button>
         
-        <button><a href="#q1">Take the Quiz!</a></button></div>
-
-        <div class="headerImages">
+        <!-- <button><a href="#q1">Take the Quiz!</a></button></div> -->
+        </div>
+        <div class="headerImagesContainer wrapper">
+            <div class="headerImages">
            
             <!-- <img src="./assets/gryffindorCrest.svg" alt=""> -->
             <div class="gryffindor">
@@ -77,6 +81,10 @@
                     </text>
                 </svg>
             </div>
+            </div>
+            
+        </div>
+
             <!-- <img src="./assets/ravenclawCrest.svg" alt=""> -->
 
             
@@ -243,8 +251,13 @@
         </form>
         </div>
 
-        <input type="submit" value="Submit!" id="submitFinal">
-        <p class="answerAll"></p>
+        <div class="submitLast">
+            <div class="wrapper">
+            <p>Time to pack your bags for Hogwarts express! Click submit to find out which house you belong to.</p>
+            <input type="submit" value="Submit!" id="submitFinal">
+            <p class="answerAll"></p>
+            </div>
+    </div>
 
     </div>
 
@@ -252,6 +265,12 @@
 
 
     </div>
+
+    <footer>
+        <div class="wrapper">
+        <p>Sorting Hat Quiz by Hira Ahsan</p>
+        </div>
+    </footer>
     
 
 

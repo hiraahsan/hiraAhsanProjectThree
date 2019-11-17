@@ -2,9 +2,14 @@ form {
     height: 100vh;
 }
 
-.q1, .q3, .q5 {
+.q1, .q3, .q5, footer {
     background: #372e29;
     color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
 }
 
 .qText {
@@ -16,12 +21,21 @@ form {
     form {
         padding-top: 20%;
         h2 {
+            margin-bottom: 20px;
 
         }
     }
 }
 
-.q2, .q4 {
+// .answer label {
+//     margin: 20px 10px; 
+
+//     i .fas.fa-hat-wizard {
+//         margin: 0;
+//     }
+// }
+
+.q2, .q4, .submitLast {
     background: #740001;
     color: white;
 }
