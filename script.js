@@ -1,16 +1,45 @@
 
-// object for default house scores
+// init vars
 
-const houses = {
-    gryffindor: 0,
-    slytherin: 0,
-    hufflepuff: 0,
-    ravenclaw: 0
-}
+const currentQuestion = 0;
+let score = 0;
 
 // onclick functions for submit next
 
-$('.nextButtonOne').on('click', function() {
+//function that will calculate the scores for each house after each question is answered
+$('form').on('submit', function (e) {
+    //to prevent page from refreshing every time a form is submitted (i.e., when question is answered)
+    e.preventDefault();
+    //when radio button is checked off, record and store house name in a variable
+    let answer = $(this).find('input:radio:checked').attr('data-house');
+
+    if (answer === 'gryffindor') {
+        score += 40;
+        $(this).find('input:submit').attr('disabled', true);
+
+    }
+        else if(answer === "slytherin") {
+        score += 10;
+        $(this).find('input:submit').attr('disabled', true);
+    }
+
+        else if (answer === "hufflepuff") {
+        score += 20;
+
+        $(this).find('input:submit').attr('disabled', true);
+        }
+        else if (answer === "ravenclaw") {
+        score += 30;
+        $(this).find('input:submit').attr('disabled', true);
+        }
+
+    else {
+        $(this).find('.pickOne').text('You have to answer to continue!');
+        // alert to complete answer
+    }
+});
+
+$('.nextButtonOne').on('click', function () {
     location.href = '#q2';
 });
 
@@ -30,77 +59,7 @@ $('.nextButtonFive').on('click', function () {
     location.href = '#submitFinal';
 });
 
-
-
-
-// init vars
-
-const currentQuestion = 0;
-let score = 0;
-
-function question() {}
-
-// let choices = quiz[currentQuestion].choices,
-// choicesHtml = "";
-
-// console.log(quiz[currentQuestion].choices);
-
-
-// const smoothScroll = (hash) => {
-//     let $hash= $(hash);
-//     $('html', 'body').animate(
-//         {
-//             scrollTop: $(hash).offset().top
-//         }, 800, function() {
-//             window.location.hash = hash;
-//         }
-//     )
-// }
-
-//function that will tally the scores for each house after each question is answered
-$('form').on('submit', function (e) {
-    //to prevent page from refreshing every time a form is submitted (i.e., when question is answered)
-    e.preventDefault();
-    //when radio button is checked off, record and store house name in a variable
-    let answer = $(this).find('input:radio:checked').attr('data-house');
-
-
-    console.log(answer);
-
-
-    if (answer === 'gryffindor') {
-        // houses['gryffindor'] += 40;
-        score += 40;
-        $(this).find('input:submit').attr('disabled', true);
-
-    }
-        else if(answer === "slytherin") {
-            // houses['slytherin'] += 10;
-        score += 10;
-        $(this).find('input:submit').attr('disabled', true);
-    }
-
-        else if (answer === "hufflepuff") {
-            // houses['hufflepuff'] += 20;
-        score += 20;
-
-        $(this).find('input:submit').attr('disabled', true);
-        }
-        else if (answer === "ravenclaw") {
-            // houses['ravenclaw'] += 30;
-        score += 30;
-        $(this).find('input:submit').attr('disabled', true);
-        }
-
-    else {
-        $(this).find('.pickOne').text('You have to answer to continue!');
-        //add alert to complete answer
-    }
-});
-
-console.log(Object.values(houses));
-
-// results section to push to html once final score is calculated
+// results object to push to html once final score is calculated
 const results = {
     gryffindor: {
         title: "Gryffindor!",
@@ -141,12 +100,11 @@ const results = {
 }
 
 
-    // add up the final answers to find out what house they're in
+    // add up the final answers to find out what house they're in, then assign them
+
 const finalAnswer = $('#submitFinal').on('click', function (e) {
     e.preventDefault();
-    // $(this).find('#submitFinal').attr('disabled', true);
-
-
+    
     const answers = $('form').find('input:radio:checked');
 
         if (answers.length === 5) {
@@ -179,8 +137,6 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
     }
 
 $('.resultContainer').html(`<br>${resultingWinner.image}<br><h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p><br><br>`);
-    // $(this).find('#submitFinal').attr('disabled', true);
-    console.log(this);
 
 });
 

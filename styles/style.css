@@ -336,13 +336,13 @@ footer {
 }
 
 label {
-  margin: 20px 0;
+  display: inline-block;
 }
 
 input[type="radio"] {
   -webkit-transform: scale(2);
           transform: scale(2);
-  margin: 20px 0;
+  margin: 15px 0;
   margin-right: 20px;
 }
 
@@ -350,6 +350,7 @@ input[type="radio"] {
   input[type="radio"] {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
+    margin-right: 5px;
   }
 }
 
@@ -360,6 +361,18 @@ input[type="radio"] {
   width: 250px;
   cursor: pointer;
   margin: 10% 0;
+}
+
+@media (min-width: 1500px) {
+  .btn {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .btn {
+    width: 200px;
+  }
 }
 
 .btnOne {
@@ -502,7 +515,8 @@ img {
 }
 
 .wrapper {
-  max-width: 80%;
+  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -534,13 +548,6 @@ img {
 
 .ravenclaw svg {
   fill: #946b2d;
-}
-
-@media (min-width: 2000px) {
-  .wrapper {
-    max-width: 50%;
-    margin: 0 auto;
-  }
 }
 
 .slytherin {
@@ -582,7 +589,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 3%;
   padding-top: 1%;
+  width: 80%;
 }
 
 .headerText button {

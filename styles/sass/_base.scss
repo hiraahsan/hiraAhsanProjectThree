@@ -1,4 +1,4 @@
-// ADD BASE STYLES HERE //
+// BASE STYLES HERE //
 
 html {
     font-size: 62.5%;
@@ -24,6 +24,7 @@ h3, h2 {
     @media (max-width:700px) {
         font-size: 2.5rem;
     }
+
 }
 
 body {
@@ -50,11 +51,7 @@ img {
 }
 
 .wrapper {
-    max-width: 80%;
+    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
-
-// .stars {
-//     background-image:url(../assets/headerBackground.jpg);
-//     // position: fixed;
-// }
