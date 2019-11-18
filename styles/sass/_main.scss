@@ -1,6 +1,6 @@
-form {
-    height: 100vh;
-}
+// form {
+//     height: 100vh;
+// }
 
 .q1, .q3, .q5, .resultContainer {
     background: #372e29;
@@ -26,9 +26,26 @@ footer {
     .wrapper {
         display: flex;
 
+        @media (max-width: 900px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            // padding: 5% 0;
+            
+        }
+
+        form {
+            width: 60%;
+                    @media (max-width: 900px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+        }
+
 
         svg {
             fill: white;
+            max-width: 40%;
         }
     }
 }
@@ -44,11 +61,22 @@ footer {
     // align-content: center;
     // padding-top: 20%;
 
+    @media (max-width: 900px) {
+        padding: 5% 0;
+    }
+
+
     form {
         display: flex;
         flex-direction: column;
         align-items: start;
         padding: 15% 0;
+
+        @media (max-width: 900px) {
+            padding: 0;
+            margin-bottom: 50px;
+            align-items: center;
+        }
         h2 {
             margin-bottom: 20px;
 
@@ -85,7 +113,7 @@ footer {
 
 .fas.fa-hat-wizard {
     display: none;
-        width: 20px;
+    width: 20px;
     height: 20px;
     color: whitesmoke;
 }
@@ -132,7 +160,8 @@ input[type="radio"]:checked + label .fas.fa-hat-wizard {
 	height: 50px;
 	text-align: center;
 	width: 250px;
-	cursor: pointer;
+    cursor: pointer;
+    margin: 10% 0;
 }
 
 .btnOne {
@@ -185,6 +214,29 @@ input[type="radio"]:checked + label .fas.fa-hat-wizard {
 	transform: scale(0.1, 1);
 }
 
+
+input[value=Next] {
+    border: none;
+    margin-top: 20px;
+    background: #740001;
+    color: white;
+    padding: 5px 30px;
+    transition: 0.5s all;
+    border: white solid 2px;
+
+    &:hover {
+        background: white;
+        color: #740001;
+        border: 2px solid #740001;
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: 3px 2px 0 0;
+        transition: 0.5s all;
+    }
+    // border: 2px solid #d32e54;
+}
 // .nextButtons {
 
 // }

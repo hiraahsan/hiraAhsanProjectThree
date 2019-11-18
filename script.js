@@ -147,11 +147,11 @@ console.log(Object.values(houses));
 const results = {
     gryffindor: {
         title: "Gryffindor!",
-        description: `You might belong in Gryffindor,
-        Where dwell the brave at heart,
-        Their daring, nerve and chivalry
+        description: `You might belong in Gryffindor,<br>
+        Where dwell the brave at heart,<br>
+        Their daring, nerve and chivalry,<br>
         Set Gryffindors apart.` ,
-        image: "insert image here"
+        image: `<iframe src="https://giphy.com/embed/Tl2AK8HOHj7SU" width="480" height="200" frameBorder="0"class="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/mic-harry-potter-hufflepuff-hogwarts-houses-Tl2AK8HOHj7SU">via GIPHY</a></p>`
     },
 
     slytherin: {
@@ -160,16 +160,16 @@ const results = {
         You'll make your real friends,<br>
         Those cunning folk use any means,<br>
         To achieve their ends.`,
-        image: "insert image here"
+        image: `<iframe src="https://giphy.com/embed/UTYINTtzZCs2DN4gsY" width="480" height="270" frameBorder="0"class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-bobs-burgers-draco-malfoy-slytherin-UTYINTtzZCs2DN4gsY">via GIPHY</a></p>`
     },
 
     hufflepuff: {
         title: "Hufflepuff!",
-        description: `You might belong in Hufflepuff,
-        Where they are just and loyal,
-        Those patient Hufflepuffs are true,
+        description: `You might belong in Hufflepuff,<br>
+        Where they are just and loyal,<br>
+        Those patient Hufflepuffs are true,<br>
         And unafraid of toil. `,
-        image: "insert image here"
+        image: `<iframe src="https://giphy.com/embed/jIhX9ZrJIKGic" width="480" height="480" frameBorder="0"class="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/hogwarts-pottermore-sorting-jIhX9ZrJIKGic">via GIPHY</a></p>`
     },
 
     ravenclaw: {
@@ -178,7 +178,7 @@ const results = {
 If you've a ready mind,
 Where those of wit and learning,
         Will always find their kind.`,
-        image: "insert image here"
+        image: `<iframe src="https://giphy.com/embed/10UJquJMEEgRvG" width="480" height="480" frameBorder="0"class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hpedit-luna-lovegood-hpgif-10UJquJMEEgRvG">via GIPHY</a></p>`
     }
 
 }
@@ -226,7 +226,7 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
         $('.answerAll').text('Answer all the questions to find out the result!');
     }
 
-    $('.resultContainer').html(`<h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
+$('.resultContainer').html(`${resultingWinner.image}<br><h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
     // $(this).find('#submitFinal').attr('disabled', true);
     console.log(this);
 

@@ -179,10 +179,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-form {
-  height: 100vh;
-}
-
 .q1, .q3, .q5, .resultContainer {
   background: #372e29;
   color: white;
@@ -217,8 +213,33 @@ footer {
   display: flex;
 }
 
+@media (max-width: 900px) {
+  .q1 .wrapper, .q2 .wrapper, .q3 .wrapper, .q4 .wrapper, .q5 .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.q1 .wrapper form, .q2 .wrapper form, .q3 .wrapper form, .q4 .wrapper form, .q5 .wrapper form {
+  width: 60%;
+}
+
+@media (max-width: 900px) {
+  .q1 .wrapper form, .q2 .wrapper form, .q3 .wrapper form, .q4 .wrapper form, .q5 .wrapper form {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
   fill: white;
+  max-width: 40%;
 }
 
 footer {
@@ -235,6 +256,12 @@ footer {
           justify-content: center;
 }
 
+@media (max-width: 900px) {
+  .qText {
+    padding: 5% 0;
+  }
+}
+
 .qText form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +274,16 @@ footer {
       -ms-flex-align: start;
           align-items: start;
   padding: 15% 0;
+}
+
+@media (max-width: 900px) {
+  .qText form {
+    padding: 0;
+    margin-bottom: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .qText form h2 {
@@ -305,6 +342,7 @@ input[type="radio"]:checked + label .fas.fa-hat-wizard {
   text-align: center;
   width: 250px;
   cursor: pointer;
+  margin: 10% 0;
 }
 
 .btnOne {
@@ -368,6 +406,31 @@ input[type="radio"]:checked + label .fas.fa-hat-wizard {
   opacity: 0;
   -webkit-transform: scale(0.1, 1);
           transform: scale(0.1, 1);
+}
+
+input[value=Next] {
+  border: none;
+  margin-top: 20px;
+  background: #740001;
+  color: white;
+  padding: 5px 30px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border: white solid 2px;
+}
+
+input[value=Next]:hover {
+  background: white;
+  color: #740001;
+  border: 2px solid #740001;
+  cursor: pointer;
+}
+
+input[value=Next]:active {
+  -webkit-box-shadow: 3px 2px 0 0;
+          box-shadow: 3px 2px 0 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 html {
@@ -474,6 +537,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 1%;
 }
 
 .headerText button {
