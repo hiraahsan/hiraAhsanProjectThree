@@ -250,12 +250,12 @@ footer {
 
 .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
   fill: white;
-  max-width: 40%;
+  width: 40%;
 }
 
 @media (max-width: 800px) {
   .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
-    max-width: 75%;
+    width: 75%;
   }
 }
 
