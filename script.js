@@ -147,25 +147,37 @@ console.log(Object.values(houses));
 const results = {
     gryffindor: {
         title: "Gryffindor!",
-        description: "insert text",
+        description: `You might belong in Gryffindor,
+        Where dwell the brave at heart,
+        Their daring, nerve and chivalry
+        Set Gryffindors apart.` ,
         image: "insert image here"
     },
 
     slytherin: {
         title: "Slytherin!",
-        description: "insert text",
+        description: `Or perhaps in Slytherin, <br>
+        You'll make your real friends,<br>
+        Those cunning folk use any means,<br>
+        To achieve their ends.`,
         image: "insert image here"
     },
 
     hufflepuff: {
         title: "Hufflepuff!",
-        description: "insert text",
+        description: `You might belong in Hufflepuff,
+        Where they are just and loyal,
+        Those patient Hufflepuffs are true,
+        And unafraid of toil. `,
         image: "insert image here"
     },
 
     ravenclaw: {
         title: "Ravenclaw!",
-        description: "insert text",
+        description: `Or yet in wise old Ravenclaw,
+If you've a ready mind,
+Where those of wit and learning,
+        Will always find their kind.`,
         image: "insert image here"
     }
 
@@ -180,6 +192,8 @@ const results = {
     // add up the final answers to find out what house they're in
 const finalAnswer = $('#submitFinal').on('click', function (e) {
     e.preventDefault();
+    // $(this).find('#submitFinal').attr('disabled', true);
+
 
     const answers = $('form').find('input:radio:checked');
 
@@ -187,24 +201,24 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
 
         if (score > 0 && score <= 80) {
             resultingWinner = results['slytherin']
-            $(this).find('input:submit').attr('disabled', true);
+
 
         }
         else if (score > 80 && score <= 120) {
             resultingWinner = results['hufflepuff']
-            $(this).find('input:submit').attr('disabled', true);
+
         }
 
         else if (score > 120 && score <= 160) {
             resultingWinner = results['ravenclaw']
-            $(this).find('input:submit').attr('disabled', true);
+
 
 
         } else if (score > 160 && score <= 200) {
             resultingWinner = results['gryffindor']
-            $(this).find('input:submit').attr('disabled', true);
-        }
 
+        }
+            $(this).find('#submitFinal').attr('disabled', true);
 
 
     } else {
@@ -212,10 +226,16 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
         $('.answerAll').text('Answer all the questions to find out the result!');
     }
 
+    $('.resultContainer').html(`<h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
+    // $(this).find('#submitFinal').attr('disabled', true);
+    console.log(this);
+
+
+
+
     // if ()
     // let answerScore = houses[$(this)];
     // if (answers.length === 5) {
-    $('.resultContainer').append(`<h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
 
 });
 

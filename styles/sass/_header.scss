@@ -63,6 +63,21 @@ header {
     // border-radius: 10px;
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+        border: none;
+        border: 3px solid #740001;
+        background: #d3a625;
+        box-shadow: 2px 2px;
+
+        &:active {
+            box-shadow: none;
+            transition: 0.5s all;
+        }
+    }
 
     
     // position: absolute;
