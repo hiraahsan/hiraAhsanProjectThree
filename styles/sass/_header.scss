@@ -9,39 +9,39 @@
 }
 
 // SVG STYLING
+header {
+    .hufflepuff {
+        background: #ecb939;
 
-.hufflepuff {
-    background: #ecb939;
+        svg {
+        fill: #372e29;
+        }
+    }
 
-    svg {
-    fill: #372e29;
+    .ravenclaw {
+
+        background: #0e1a40;
+        svg {
+        fill: #946b2d;
+        }
+    }
+
+    .slytherin {
+        background: #1a472a;
+        
+        svg {
+        fill: #aaaaaa;
+        }
+    }
+
+    .gryffindor {
+        background-color: #740001;
+
+        svg {
+        fill: #d3a625;
+        }
     }
 }
-
-.ravenclaw {
-
-    background: #0e1a40;
-    svg {
-    fill: #946b2d;
-    }
-}
-
-.slytherin {
-    background: #1a472a;
-    
-    svg {
-    fill: #aaaaaa;
-    }
-}
-
-.gryffindor {
-    background-color: #740001;
-
-    svg {
-    fill: #d3a625;
-    }
-}
-
 
 
 svg {

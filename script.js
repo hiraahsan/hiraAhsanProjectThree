@@ -4,8 +4,6 @@
 const currentQuestion = 0;
 let score = 0;
 
-// onclick functions for submit next
-
 //function that will calculate the scores for each house after each question is answered
 $('form').on('submit', function (e) {
     //to prevent page from refreshing every time a form is submitted (i.e., when question is answered)
@@ -38,6 +36,9 @@ $('form').on('submit', function (e) {
         // alert to complete answer
     }
 });
+
+// onclick functions for submit next
+
 
 $('.nextButtonOne').on('click', function () {
     location.href = '#q2';
@@ -99,7 +100,7 @@ const results = {
 
 }
 
-    // add up the final answers to find out what house they're in, then assign them
+// add up the final answers to find out what house they're in, then assign them
 
 const finalAnswer = $('#submitFinal').on('click', function (e) {
     e.preventDefault();

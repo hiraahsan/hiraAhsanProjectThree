@@ -534,35 +534,35 @@ img {
   width: 50%;
 }
 
-.hufflepuff {
+header .hufflepuff {
   background: #ecb939;
 }
 
-.hufflepuff svg {
+header .hufflepuff svg {
   fill: #372e29;
 }
 
-.ravenclaw {
+header .ravenclaw {
   background: #0e1a40;
 }
 
-.ravenclaw svg {
+header .ravenclaw svg {
   fill: #946b2d;
 }
 
-.slytherin {
+header .slytherin {
   background: #1a472a;
 }
 
-.slytherin svg {
+header .slytherin svg {
   fill: #aaaaaa;
 }
 
-.gryffindor {
+header .gryffindor {
   background-color: #740001;
 }
 
-.gryffindor svg {
+header .gryffindor svg {
   fill: #d3a625;
 }
 
