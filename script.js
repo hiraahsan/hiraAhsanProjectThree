@@ -30,49 +30,6 @@ $('.nextButtonFive').on('click', function () {
     location.href = '#submitFinal';
 });
 
-// $('.nextButtonOne').on('click', location.href = $(this).next('.questions'));
-
-
-
-
-// $('.nextButtonOne').on('click', function(e) {
-//     e.preventDefault;
-//     location.href = $(this).next('.questions')});
-// $('')
-
-
-const quiz = [
-       { choices: ["Tell the professor immediately – cheating is wrong, no matter what.",
-    "Give them a high five for managing to sneak the quill into the exam.",
-    " Encourage the other student to admit what they'd done to the professor. ",
-    " Nothing, but if I hadn't come top of the class, I'd definitely tell the professor. "],
-        answer: [1, 2, 3, 4]
-    },
-        { choices: ["Expelliarmus!",
-"Protego!",
-"Stupefy!",
-"Crucio!"],
-answer: [1, 2, 3, 4]
-        },
-    {choices: ["My ability to absorb new information.",
-"My ability to make new friends.",
-"My ability to get what I want.",
-"My ability to keep secrets." ],
-    answer: [1, 2, 3, 4]
-},
-
-    {choices: ["Sneaking into the Forbidden Forest at night on a dare.",
-"Being put in detention after I was caught in the library after hours.",
-        "Nothing! I'd never do anything to warrant a Howler.",
-"Getting caught cheating in my Divination O.W.L."],
-    answer: [1, 2, 3, 4]
-},
-    {choices: ["Owl", "Cat",
-"Toad",
-"Nothing.I can't be trusted to look after a pet!"],
-    answer: [1, 2, 3, 4]
-}
-];
 
 
 
@@ -83,10 +40,10 @@ let score = 0;
 
 function question() {}
 
-let choices = quiz[currentQuestion].choices,
-choicesHtml = "";
+// let choices = quiz[currentQuestion].choices,
+// choicesHtml = "";
 
-console.log(quiz[currentQuestion].choices);
+// console.log(quiz[currentQuestion].choices);
 
 
 // const smoothScroll = (hash) => {
@@ -151,7 +108,7 @@ const results = {
         Where dwell the brave at heart,<br>
         Their daring, nerve and chivalry,<br>
         Set Gryffindors apart.` ,
-        image: `<iframe src="https://giphy.com/embed/Tl2AK8HOHj7SU" width="480" height="200" frameBorder="0"class="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/mic-harry-potter-hufflepuff-hogwarts-houses-Tl2AK8HOHj7SU">via GIPHY</a></p>`
+        image: `<iframe src="https://giphy.com/embed/Tl2AK8HOHj7SU" frameBorder="0"class="giphy-embed"></iframe> <p><a href="https://giphy.com/gifs/mic-harry-potter-hufflepuff-hogwarts-houses-Tl2AK8HOHj7SU">via GIPHY</a></p>`
     },
 
     slytherin: {
@@ -160,7 +117,7 @@ const results = {
         You'll make your real friends,<br>
         Those cunning folk use any means,<br>
         To achieve their ends.`,
-        image: `<iframe src="https://giphy.com/embed/UTYINTtzZCs2DN4gsY" width="480" height="270" frameBorder="0"class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-bobs-burgers-draco-malfoy-slytherin-UTYINTtzZCs2DN4gsY">via GIPHY</a></p>`
+        image: `<iframe src="https://giphy.com/embed/UTYINTtzZCs2DN4gsY"  frameBorder="0"class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-bobs-burgers-draco-malfoy-slytherin-UTYINTtzZCs2DN4gsY">via GIPHY</a></p>`
     },
 
     hufflepuff: {
@@ -169,24 +126,19 @@ const results = {
         Where they are just and loyal,<br>
         Those patient Hufflepuffs are true,<br>
         And unafraid of toil. `,
-        image: `<iframe src="https://giphy.com/embed/jIhX9ZrJIKGic" width="480" height="480" frameBorder="0"class="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/hogwarts-pottermore-sorting-jIhX9ZrJIKGic">via GIPHY</a></p>`
+        image: `<iframe src="https://giphy.com/embed/jIhX9ZrJIKGic" frameBorder="0"class="giphy-embed" ></iframe> <p><a href="https://giphy.com/gifs/hogwarts-pottermore-sorting-jIhX9ZrJIKGic">via GIPHY</a></p>`
     },
 
     ravenclaw: {
         title: "Ravenclaw!",
-        description: `Or yet in wise old Ravenclaw,
-If you've a ready mind,
-Where those of wit and learning,
+        description: `Or yet in wise old Ravenclaw,<br>
+        If you've a ready mind,<br>
+        Where those of wit and learning,<br>
         Will always find their kind.`,
-        image: `<iframe src="https://giphy.com/embed/10UJquJMEEgRvG" width="480" height="480" frameBorder="0"class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hpedit-luna-lovegood-hpgif-10UJquJMEEgRvG">via GIPHY</a></p>`
+        image: `<iframe src="https://giphy.com/embed/EXhSJyrGvFv5C" frameBorder="0" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/luna-lovegood-EXhSJyrGvFv5C">via GIPHY</a></p>`
     }
 
 }
-
-
-// $('input:submit').on('click', function() {
-//     $('input:submit').fadeOut('slow');
-// });
 
 
     // add up the final answers to find out what house they're in
@@ -226,16 +178,9 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
         $('.answerAll').text('Answer all the questions to find out the result!');
     }
 
-$('.resultContainer').html(`${resultingWinner.image}<br><h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p>`);
+$('.resultContainer').html(`<br>${resultingWinner.image}<br><h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p><br><br>`);
     // $(this).find('#submitFinal').attr('disabled', true);
     console.log(this);
-
-
-
-
-    // if ()
-    // let answerScore = houses[$(this)];
-    // if (answers.length === 5) {
 
 });
 

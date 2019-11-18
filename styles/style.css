@@ -211,6 +211,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 15% 0;
 }
 
 @media (max-width: 900px) {
@@ -240,6 +241,18 @@ footer {
 .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
   fill: white;
   max-width: 40%;
+}
+
+@media (max-width: 800px) {
+  .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .q1 .wrapper svg, .q2 .wrapper svg, .q3 .wrapper svg, .q4 .wrapper svg, .q5 .wrapper svg {
+    max-width: 500px;
+  }
 }
 
 footer {
@@ -273,7 +286,6 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding: 15% 0;
 }
 
 @media (max-width: 900px) {
@@ -408,7 +420,7 @@ input[type="radio"]:checked + label .fas.fa-hat-wizard {
           transform: scale(0.1, 1);
 }
 
-input[value=Next] {
+input[value=Next], .submitFinal {
   border: none;
   margin-top: 20px;
   background: #740001;
@@ -419,23 +431,38 @@ input[value=Next] {
   border: white solid 2px;
 }
 
-input[value=Next]:hover {
+input[value=Next]:hover, .submitFinal:hover {
   background: white;
   color: #740001;
   border: 2px solid #740001;
   cursor: pointer;
 }
 
-input[value=Next]:active {
+input[value=Next]:active, .submitFinal:active {
   -webkit-box-shadow: 3px 2px 0 0;
           box-shadow: 3px 2px 0 0;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 
+.resultContainer p:last-of-type {
+  padding-bottom: 50px;
+}
+
+.resultContainer iframe {
+  padding-top: 50px;
+  max-width: 100%;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -444,6 +471,18 @@ body {
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  h3, h2 {
+    font-size: 2.5rem;
+  }
 }
 
 body {
@@ -496,6 +535,13 @@ img {
 
 .ravenclaw svg {
   fill: #946b2d;
+}
+
+@media (min-width: 2000px) {
+  .wrapper {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .slytherin {
@@ -585,12 +631,12 @@ header {
 }
 
 .stars {
-  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background: #000 url(../assets/stars.png) repeat top center;
   z-index: -1;
 }
 
 .twinkling {
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background: transparent url(../assets/twinkling.png) repeat top center;
   z-index: -1;
   -webkit-animation: move-twink-back 200s linear infinite;
   animation: move-twink-back 200s linear infinite;
