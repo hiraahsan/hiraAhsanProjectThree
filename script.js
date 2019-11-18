@@ -1,5 +1,5 @@
 
-// init vars
+// declaring the score function which will tally up the score according to each house
 
 const currentQuestion = 0;
 let score = 0;
@@ -98,7 +98,6 @@ const results = {
     }
 
 }
-
 
     // add up the final answers to find out what house they're in, then assign them
 
