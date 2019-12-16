@@ -32,7 +32,11 @@ $('form').on('submit', function (e) {
         }
 
     else {
-        $(this).find('.pickOne').text('You have to answer to continue!');
+        swal({
+            title: "Error!",
+            text: "You need to answer to continue!",
+            icon: "error",
+          });
         // alert to complete answer
     }
 });
@@ -59,6 +63,8 @@ $('.nextButtonFour').on('click', function () {
 $('.nextButtonFive').on('click', function () {
     location.href = '#submitFinal';
 });
+
+
 
 // results object to push to html once final score is calculated
 const results = {
@@ -104,6 +110,8 @@ const results = {
 
 const finalAnswer = $('#submitFinal').on('click', function (e) {
     e.preventDefault();
+    $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+
     
     const answers = $('form').find('input:radio:checked');
 
@@ -129,6 +137,7 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
 
         }
             $(this).find('#submitFinal').attr('disabled', true);
+            
 
 
     } else {
