@@ -142,7 +142,11 @@ const finalAnswer = $('#submitFinal').on('click', function (e) {
 
     } else {
         // add warning to complete all questions in order to see result.
-        $('.answerAll').text('Answer all the questions to find out the result!');
+            swal({
+                title: "Error!",
+                text: "You need to answer all questions to continue!",
+                icon: "error",
+            });
     }
 
 $('.resultContainer').html(`<br>${resultingWinner.image}<br><h2>${resultingWinner.title}</h2><p>${resultingWinner.description}</p><br><br>`);
